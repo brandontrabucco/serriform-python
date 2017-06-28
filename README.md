@@ -1,6 +1,6 @@
 # The Serriform Neural Network
 
-![The Algorithm Expression](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/cb39f4c32e849ca4cb893a8954f7bb6c/image.png)
+<center>![The Algorithm Expression](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/cb39f4c32e849ca4cb893a8954f7bb6c/image.png)</center>
 
 The • symbol denotes a dot product.
 
