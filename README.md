@@ -3,8 +3,11 @@
 ![The Algorithm Expression](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/cb39f4c32e849ca4cb893a8954f7bb6c/image.png)
 
 The • symbol denotes a one-dimensional dot product.
+
 The : symbol denotes a two-dimensional dot product.
+
 The ⊙ symbol denotes element-wise multiplication.
+
 This algorithm is an extension of the fully-connected feed-forward artificial neural networks. For this algorithm, neurons in a layer ℓ may connect to any neurons in any layer (ℓ + n) where n is any positive non-zero integer. Additionally, a delay of 1 iteration is set between neurons. A delay allows for each connection in this algorithm to be updated simultaneously.
 
 Overlapping delayed neuron connections allow this algorithm to learn patterns within a fixed temporal window. This window is given by the amount of overlap between neuron connections. Unlike other sequence learning algorithms, no recurrent neuron connections are used in this algorithm, and a modified version of back-propagation though time allows for online training.
