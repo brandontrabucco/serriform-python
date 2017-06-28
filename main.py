@@ -147,7 +147,7 @@ class serriform:
             self.inputPartial = np.tensordot(self.delta, self.inputWeights.transpose(1, 2, 0), axes=2)
             self.statePartial = np.tensordot(self.delta, (self.adjacency * self.stateWeights).transpose(2, 3, 0, 1), axes=2)
             self.inputWeightPartial = np.tensordot(self.stimulus.transpose(1, 0), self.delta, axes=1)
-            self.stateWeightPartial = np.tensordot(self.previous.transpose(1, 2, 0), self.delta, axes=1) * self.adjacency
+            self.stateWeightPartial = np.tensordot(np.tensordot(self.previous.transpose(1, 2, 0), self.delta, axes=1), self.adjacency, axes=2)
             self.inputWeights -= alpha * self.inputWeightPartial
             self.stateWeights -= alpha * self.stateWeightPartial
             return self.inputPartial
