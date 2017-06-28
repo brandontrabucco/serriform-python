@@ -1,4 +1,4 @@
-# Serriform Neural Network
+# the serriform algorithm
 
 ![The Algorithm Expression](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/cb39f4c32e849ca4cb893a8954f7bb6c/image.png)
 
@@ -16,7 +16,7 @@ Overlapping delayed neuron connections allow this algorithm to learn patterns wi
 
 This image is a generalized structure for the Serriform Neural Network. Each green dot represents an input neuron. Each red dot represents a state neuron. Each blue dot is an output neuron. Each green line represents an input connector. Each red line is a state connector. Each blue line is an output connector. Each connector has an associated weight.
 
-## Activation Function
+## activation function
 
 ![The Activation Function](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/352e82069f797491df91812a770e8c74/image.png)
 
