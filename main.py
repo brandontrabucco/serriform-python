@@ -1,9 +1,24 @@
 """
 
 Author: Brandon Trabucco.
-Date: 2017.06.27.
+Creation Date: 2017.06.27.
 Program Name: Serriform Neural Network.
-Program Description: This project contains a Python implementation of the serriform neural network algorithm, using NumPy as a linear algebra system.
+Program Description:
+    This algorithm is an extension of the fully-connected feed-forward artificial neural network.
+    For this algorithm, neurons in a layer ℓ may connect to any neurons in any layer (ℓ + n) where n is any positive non-zero integer.
+    Additionally, a delay of 1 update cycle is set between neurons.
+    A delay allows for each connection in this algorithm to be updated simultaneously.
+    Overlapping delayed neuron connections allow this algorithm to learn patterns within a fixed temporal window.
+    This window is given by the amount of overlap between neuron connections.
+    Unlike other sequence learning algorithms, no recurrent neuron connections are used in this algorithm, and a modified version of back-propagation though time allows for online training.
+
+
+Version Name: Fully Implemented Forward & Backward Propagation
+Version Number: v0.1-alpha
+Version Description:
+    This version contains a fully functional serriform algorithm, which may be connected to other types of neural network layers to form a full network.
+    More robust unit testing is needed in order to find bugs, and prove consistency.
+    A mathematical proof is needed to officially derive the partial derivatives used in backpropagation.
 
 """
 
@@ -147,7 +162,7 @@ class serriform:
             self.inputPartial = np.tensordot(self.delta, self.inputWeights.transpose(1, 2, 0), axes=2)
             self.statePartial = np.tensordot(self.delta, (self.adjacency * self.stateWeights).transpose(2, 3, 0, 1), axes=2)
             self.inputWeightPartial = np.tensordot(self.stimulus.transpose(1, 0), self.delta, axes=1)
-            self.stateWeightPartial = np.tensordot(np.tensordot(self.previous.transpose(1, 2, 0), self.delta, axes=1), self.adjacency, axes=2)
+            self.stateWeightPartial = np.tensordot(self.previous.transpose(1, 2, 0), self.delta, axes=1) * self.adjacency
             self.inputWeights -= alpha * self.inputWeightPartial
             self.stateWeights -= alpha * self.stateWeightPartial
             return self.inputPartial
