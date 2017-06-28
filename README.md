@@ -64,10 +64,10 @@ The expression (w_s⊙a) does not capture that both w_s and a are matrices of di
 
 These partial derivatives can be calculated from the algorithm expression using the rules of multivariate calculus.
 
-![Input Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/02239f6e3206e91deff04145e8825746/image.png)
+![Input Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/84782d6ee534232d0243e1353642885c/image.png)
 
-![Input Weight Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/624c725b28ba2684b7c71ed0ad9980e2/image.png)
+![Input Weight Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/86ed9834e5d16fa892af78c0b36ae899/image.png)
 
-![State Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/ef00405f81022a3434a14b1fbe8b0f96/image.png)
+![State Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/ae744070913309d3af5aad201131a7ab/image.png)
 
-![State Weight Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/4d5ce19e4961331dfa616354728937fb/image.png)
+![State Weight Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/f0a1f38eb73a4154883800aea57aec2a/image.png)
