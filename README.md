@@ -1,4 +1,4 @@
-# The Serriform Neural Network
+# Serriform Neural Network
 
 ![The Algorithm Expression](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/cb39f4c32e849ca4cb893a8954f7bb6c/image.png)
 
@@ -16,25 +16,25 @@ Overlapping delayed neuron connections allow this algorithm to learn patterns wi
 
 This image is a generalized structure for the Serriform Neural Network. Each green dot represents an input neuron. Each red dot represents a state neuron. Each blue dot is an output neuron. Each green line represents an input connector. Each red line is a state connector. Each blue line is an output connector. Each connector has an associated weight.
 
-## The Activation Function
+## Activation Function
 
 ![The Activation Function](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/352e82069f797491df91812a770e8c74/image.png)
 
 The standard logistic curve is used as the activation function of this algorithm, and is denoted by σ(x) in the above expression. The derivative of this function with respect to the input is expressed as σ(x) * (1 - σ(x)).
 
-## The Input Matrix
+## Input Matrix
 
 ![The Input Matrix](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/ce873e51a69294a1f12fa0dfb0ce563e/image.png)
 
 The input to this algorithm is a matrix of shape (1, m), where m is the number of input units. This can also be expressed as above as a single-element vector containing a vector with m elements.
 
-## The Input Weight Matrix
+## Input Weight Matrix
 
 ![The Input Weight Matrix](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/2ef0c3df6b4da69598c992ffcfc36a12/image.png)
 
 In order to transform the input matrix of shape (1, m) a proper state matrix of shape (1, n, d), where n is the number of output units, and d is the number of intermediate layers, a one dimensional dot product is required along the last axis of the input matrix, and the first axis of the input weight matrix of shape (m, n, d).
 
-## The State Matrix
+## State Matrix
 
 ![The State Matrix](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/26061157ed11b331ffac96306b4a9a04/image.png)
 
@@ -46,13 +46,13 @@ The state matrix contains the temporal information learned by the algorithm. Inp
 
 At the conclusion of each network forward pass, the state is updated simply by setting equivalence to the current output of the network. This is to say that the new state is the output of this algorithm.
 
-## The State Weight Matrix
+## State Weight Matrix
 
 ![The State Weight Matrix](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/484fe4e4efd2656070ddea6cba72e597/image.png)
 
 The result of the double contraction between (w_s⊙a) and s must be the same shape as the state matrix (1, n, d). We start with the state weight matrix of shape (n, d, n, d), and see that two dimensions must be reduced. This is accomplished by computing a dot product across the last two dimensions of the state matrix, and the first two dimensions of the state weight matrix of shape, which results in the proper output matrix of shape (1, n, d).
 
-## The Adjacency Matrix
+## Adjacency Matrix
 
 ![The Adjacency Matrix](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/5d2f4343ebd8a185d77c656ef08d10f7/image.png)
 
@@ -70,4 +70,4 @@ These partial derivatives can be calculated from the algorithm expression using 
 
 ![State Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/718c2e600206616c800292aaafc111dd/image.png)
 
-![State Weight Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/0327ac4903c5b6748bd380cd73a93933/image.png)
+![State Weight Partial](https://trello-attachments.s3.amazonaws.com/5741d22c3d23ec58c253c910/5951950b218e8069e6e63b79/0a83e6f25235cbcc7da39b10e4fb2019/image.png)
